@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excursii</title>
+    <meta name="description" content="." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/excursii.css" />
+  </head>
+  <body>
+    <h1>Excursii cu avionul în România</h1>
+    <div class="excursie">
+      <h2>București - Cluj-Napoca</h2>
+      <p><strong>Data:</strong> 15 Aprilie 2025</p>
+      <p><strong>Preț:</strong> 300 RON</p>
+
+      <button onclick="redirectToPayment('București - Cluj-Napoca', 300)">Plătește</button>
+    </div>
+
+    <div class="excursie">
+      <h2>București - Timișoara</h2>
+      <p><strong>Data:</strong> 20 Aprilie 2025</p>
+      <p><strong>Preț:</strong> 280 RON</p>
+
+      <button onclick="redirectToPayment('București - Timișoara', 280)">Plătește</button>
+    </div>
+
+    <div class="excursie">
+      <h2>Iași - Constanța</h2>
+      <p><strong>Data:</strong> 10 Mai 2025</p>
+      <p><strong>Preț:</strong> 350 RON</p>
+  
+      <button onclick="redirectToPayment('Iași - Constanța', 350)">Plătește</button>
+    </div>
+
+    <div class="excursie">
+      <h2>București - Brașov</h2>
+      <p><strong>Data:</strong> 5 Iunie 2025</p>
+      <p><strong>Preț:</strong> 320 RON</p>
+
+      <button onclick="redirectToPayment('București - Brașov', 320)">Plătește</button>
+    </div>
+
+    <div class="excursie">
+      <h2>Cluj-Napoca - Iași</h2>
+      <p><strong>Data:</strong> 18 Iunie 2025</p>
+      <p><strong>Preț:</strong> 310 RON</p>
+
+      <button onclick="redirectToPayment('Cluj-Napoca - Iași', 310)">Plătește</button>
+    </div>
+
+
+    <button class="back-to-home" onclick="goHome()">Înapoi la Acasă</button>
+
+    <script>
+      function goHome() {
+        window.location.href = "../index.html"; 
+      }
+
+      function redirectToPayment(excursie, pret) {
+        window.location.href = "payment.html?excursie=" + encodeURIComponent(excursie) + "&pret=" + pret;
+      }
+    </script>
+  </body>
+</html>

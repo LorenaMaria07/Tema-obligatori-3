@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plată Excursie</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    <h1>Plată Excursie</h1>
+    <p><strong>Excursie:</strong> <span id="excursie"></span></p>
+    <p><strong>Preț:</strong> <span id="pret"></span> RON</p>
+
+    <form id="payment-form">
+        <label for="card-number">Număr Card:</label>
+        <input type="text" id="card-number" required>
+
+        <label for="expiry">Data Expirării:</label>
+        <input type="text" id="expiry" placeholder="MM/YY" required>
+
+        <label for="cvc">CVC:</label>
+        <input type="text" id="cvc" required>
+
+        <button type="submit">Plătește</button>
+    </form>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('excursie').textContent = params.get('excursie');
+        document.getElementById('pret').textContent = params.get('pret');
+
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Plata a fost efectuată cu succes!');
+            window.location.href = "courses.html"; 
+        });
+    </script>
+</body>
+</html>
