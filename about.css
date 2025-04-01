@@ -1,0 +1,124 @@
+
+.trainers {
+    display: flex;
+    justify-content: space-between; 
+    gap: var(--spacing-medium); 
+    flex-wrap: wrap; 
+    padding: var(--spacing-medium); 
+}
+
+
+.trainers .trainer-wrapper {
+    width: calc(33.33% - var(--spacing-medium));
+    border: 2px solid #d90429; 
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+    position: relative;
+    margin-bottom: var(--spacing-medium); 
+}
+
+
+.trainers .trainer-wrapper:hover {
+    transform: scale(1.05); 
+}
+
+
+
+
+@media (max-width: 992px) {
+    .trainers .trainer-wrapper {
+        width: calc(50% - var(--spacing-medium)); 
+    }
+}
+
+@media (max-width: 768px) {
+    .trainers .trainer-wrapper {
+        width: 100%; 
+    }
+
+    .trainers .trainer {
+        min-height: 310px;
+    }
+}
+
+@media (max-width: 576px) {
+    .trainers .trainer-wrapper {
+        width: 100%; 
+    }
+
+    .trainers .trainer {
+        min-height: 0;
+    }
+
+    .trainer p {
+        margin-bottom: var(--spacing-medium);
+    }
+}
+.romania-description {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: var(--spacing-large);
+    background-color: #f0f0f0; 
+    margin-top: var(--spacing-large);
+}
+
+.romania-description .container {
+    width: 50%; 
+}
+
+.romania-description h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: var(--spacing-small);
+    color: var(--text-primary);
+}
+
+.romania-description p {
+    font-size: var(--fs-medium);
+    color: var(--text-dark);
+    line-height: 1.6;
+    text-align: justify; 
+    padding-right: var(--spacing-medium);
+}
+
+@media (max-width: 768px) {
+    .romania-description {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .romania-description .container {
+        width: 100%; 
+    }
+
+    .romania-description h2 {
+        font-size: 24px;
+    }
+
+    .romania-description p {
+        font-size: var(--fs-small);
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: pink;
+    border: 3px solid black;
+}
+td {
+    border: 3px solid black;
+    padding: 15px;
+    vertical-align: top;
+}
+td img {
+    width: 300px;
+    display: block;
+}
+td:first-child {
+    width: 30%;
+}
+td:last-child {
+    width: 70%;
+}
